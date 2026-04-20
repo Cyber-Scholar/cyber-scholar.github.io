@@ -1,0 +1,38 @@
+GEORGE FILIPPOV
++1(703) 814-5646 ⋄Oviedo, FL
+geo.a.filippov@gmail.com ⋄linkedin.com/in/george-filippov/ ⋄https://github.com/Cyber-Scholar
+EXPERIENCE
+Chief Content Engineer August 2025 - Present Gooseberry Consulting Remote
+
+    Engineered custom cybersecurity training scenarios and CTF challenges tailored to client needs.
+    Led a team of engineers to design technical security challenges, ensuring consistent quality and rapid deployment by standardizing development workflows. 
+
+Content Developer & Tester Intern July 2024 CyberExer Tallinn, Estonia
+
+    Evaluated and documented existing training environments across both Windows and Linux platforms, ensuring functionality and usability.
+    Developed training environments aligned with the NICE framework using Ansible for automation and configu-ration management. 
+
+Student Tutor September 2020 - August 2025 Russian School of Mathematics (RSM) Remote
+
+    Provided personalized tutoring for over 100 RSM students from kindergarten through 7th grade, fostering mathematical comprehension and critical thinking skills.
+    Supported the execution of high-impact marketing events, each attracting over 1000 attendees, by engaging audiences and ensuring seamless event operations. 
+
+ACTIVITIES
+Web Exploitation Specialist Present Squid Proxy Lovers (Top 5 CTF Team in North America)
+
+    1st/308, DEFCON NoobCTF: Secured 1st place overall in a field of 300+ competitors and was the first competitor to complete the entire Web Exploitation category.
+    Technical Stack: Utilize BurpSuite and pwntools to engineer custom exploits and bypass web security controls. 
+
+Collegiate Cyber Competition Team Competitor Present University of Central Florida Collegiate Cyber Defense Club
+
+    Competed in national cybersecurity competitions, acting as a web exploitation andWindows blue team specialist.
+    1st in National 2-division College Cyber Defense Competition: Performed rapid incident response and system hardening for a mock enterprise network.
+    1st in Alamo CTF: Led web exploitation by identifying and chaining vulnerabilities to clear high-point challenges.
+    2nd in CyberBay CTF: Achieved top individual scorer status by leveraging a hybrid skill set in web security and physical security. 
+
+EDUCATION
+University of Central Florida, Honors College Graduation May 2029 Bachelor of Science - Computer Science
+PROFICIENCIES
+
+    Certifications: Comptia Net+, Comptia Sec+, AWS Cloud Practitioner
+    Languages: Python, C, Java, SQL, HTML, CSS 

