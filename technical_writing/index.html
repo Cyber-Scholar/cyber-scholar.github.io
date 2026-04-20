@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Writing | George Filippov</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1a365d;
+            --secondary: #2c5282;
+            --accent: #3182ce;
+            --light-bg: #f7fafc;
+            --white: #ffffff;
+            --text-dark: #2d3748;
+            --text-light: #718096;
+            --border: #e2e8f0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--light-bg);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        main {
+            padding: 3rem 0;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-light);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            background: var(--white);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+
+        section h2 {
+            color: var(--primary);
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent);
+            display: inline-block;
+        }
+
+        section h3 {
+            color: var(--secondary);
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            margin-top: 1.5rem;
+        }
+
+        section h3:first-of-type {
+            margin-top: 0;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+
+        .assignment-list {
+            list-style: none;
+        }
+
+        .assignment-list li {
+            margin-bottom: 1.5rem;
+        }
+
+        .assignment-list a {
+            display: block;
+            padding: 1rem 1.5rem;
+            background: var(--light-bg);
+            border-radius: 8px;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .assignment-list a:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .assignment-list .description {
+            font-weight: 400;
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin-top: 0.25rem;
+        }
+
+        footer {
+            background: var(--primary);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+
+        footer p {
+            opacity: 0.9;
+            color: var(--white);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="/" class="logo">George Filippov</a>
+                <ul class="nav-links">
+                    <li><a href="/#about">About</a></li>
+                    <li><a href="/#experience">Experience</a></li>
+                    <li><a href="/#education">Education</a></li>
+                    <li><a href="/#skills">Skills</a></li>
+                    <li><a href="/technical_writing/">Technical Writing</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="/" class="back-link">← Back to Portfolio</a>
+
+        <div class="hero">
+            <h1>Technical Writing</h1>
+            <p>Professional assignments and documents</p>
+        </div>
+
+        <section>
+            <h2>Assignments</h2>
+            <ul class="assignment-list">
+                <li>
+                    <a href="instructions.html">Instructions Assignment
+                        <span class="description">[INTRO PARAGRAPH TO BE ADDED]</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="coverletter.html">Cover Letter
+                        <span class="description">[INTRO PARAGRAPH TO BE ADDED]</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="resume.html">Resume
+                        <span class="description">[INTRO PARAGRAPH TO BE ADDED]</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="mini-interview.html">Mini Interview
+                        <span class="description">[INTRO PARAGRAPH TO BE ADDED]</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="proposal.html">Proposal Assignment
+                        <span class="description">[INTRO PARAGRAPH TO BE ADDED]</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="reflection.html">Portfolio Reflection
+                        <span class="description">Reflection on my digital portfolio design choices</span>
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 George Filippov. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
