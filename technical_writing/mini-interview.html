@@ -75,9 +75,11 @@
         .video-container {
             width: 100%;
             max-width: 800px;
+            margin: 0 auto;
         }
-        video {
+        .video-container iframe {
             width: 100%;
+            aspect-ratio: 16 / 9;
             border-radius: 8px;
         }
         footer {
@@ -108,10 +110,7 @@
             <h1>Mini Interview</h1>
             <p class="intro">[INTRO PARAGRAPH TO BE ADDED]</p>
             <div class="video-container">
-                <video controls>
-                    <source src="technical_writing_video.mp4" type="video/mp4">
-                    Your browser does not support video playback. <a href="technical_writing_video.mp4">Download Video</a>
-                </video>
+                <iframe src="https://www.youtube.com/embed/48dLlQy9n7k" title="Mini Interview" allowfullscreen></iframe>
             </div>
         </section>
     </main>
