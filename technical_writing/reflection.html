@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Reflection | Technical Writing</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1a365d;
+            --secondary: #2c5282;
+            --accent: #3182ce;
+            --light-bg: #f7fafc;
+            --white: #ffffff;
+            --text-dark: #2d3748;
+            --text-light: #718096;
+            --border: #e2e8f0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--light-bg);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        main {
+            padding: 3rem 0;
+        }
+
+        section {
+            background: var(--white);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            max-width: 800px;
+            margin: 0 auto 2rem auto;
+        }
+
+        section h1 {
+            color: var(--primary);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        section h2 {
+            color: var(--secondary);
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        section h2:first-of-type {
+            margin-top: 0;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background: var(--primary);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+
+        footer p {
+            opacity: 0.9;
+            color: var(--white);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 1rem;
+            }
+
+            section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="/" class="logo">George Filippov</a>
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/#about">About</a></li>
+                    <li><a href="/#experience">Experience</a></li>
+                    <li><a href="/#education">Education</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="/" class="back-link">← Back to Portfolio</a>
+
+        <section>
+            <h1>Portfolio Reflection</h1>
+            <p>
+                Creating this digital portfolio has been a rewarding process that allowed me to consolidate my professional story into a cohesive online presence. The portfolio is coming along well, with a clean single-page design featuring sections for About Me, Experience, Activities, Education, and Skills. I am satisfied with the page layouts and color scheme—the navy (#1a365d) and blue (#3182ce) theme creates a professional, trustworthy impression suitable for cybersecurity professionals. Navigation works smoothly through anchor links that allow visitors to jump between sections, and the fonts used (Segoe UI, Roboto, Helvetica, Arial) are clear, readable system fonts that render well across different devices. One challenge I encountered was organizing a significant amount of technical experience into concise, scannable content while still conveying the depth of my achievements in cybersecurity competitions and technical roles.
+            </p>
+            <p>
+                Through this process, I discovered several valuable resources that helped guide my design decisions. W3Schools provided quick reference for HTML and CSS techniques, while MDN Web Docs offered comprehensive documentation for more advanced styling approaches. I also reviewed my course's Digital Portfolio Resources page for best practices on presenting technical work effectively. For anyone creating their own portfolio, I would recommend planning your content structure early, using a consistent visual theme, and ensuring your site is mobile-responsive.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 George Filippov. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
